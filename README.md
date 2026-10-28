@@ -22,6 +22,13 @@ This application follows a lightweight, file-based data persistence pattern. It 
 ### Prerequisites
 - Make sure you have **Python 3.x** installed on your system. No external libraries or dependencies are required as the project uses Python's built-in standard libraries (e.g., `os`).
 
+### Limitations
+
+* Volunteer matching is based on exact location-name matching.
+* The program does not calculate actual distance or use GPS.
+* Food expiry duration is stored, but automatic expiry checking is not implemented.
+* Food safety should be checked by responsible people before distribution.
+
 ### Running the Application
 
 1. Clone or download this repository to your local machine.
