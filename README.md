@@ -1,55 +1,31 @@
-# Local Food Surplus & Community Share Network
+# Local Food Share Network
 
-A beginner-friendly Python command-line project that helps record food donations and match them with volunteers in the same area.
+A command-line interface (CLI) application built with Python to bridge the gap between food donors and local volunteers. The core objective of this project is to minimize food waste by streamlining the collection and distribution process within local communities.
 
-## Features
+## Core Features
 
-- Add food donations
-- Register volunteers
-- View available food
-- Match food with a volunteer in the same area
-- Mark food as distributed
-- Keep a distribution log in text files
+- **Food Donation Management:** Donors can securely list surplus food, specifying the item name, quantity, pickup location, and estimated shelf-life/expiration hours.
+- **Volunteer Registration:** Volunteers can register their profiles with their service locations and contact information.
+- **Smart Area Matching:** Automatically pairs available food donations with registered volunteers in the same geographic location.
+- **Distribution Tracking:** Allows administrators to mark food items as distributed, instantly updating the inventory and generating a permanent transaction log.
+- **Audit & Activity Logs:** Keeps a detailed record of all successfully distributed food items for transparency and reporting.
 
-## Requirements
+## Project Architecture & Storage
 
-- Python 3
-- No external libraries required
+This application follows a lightweight, file-based data persistence pattern. It does not require any external database setup and automatically manages the following local text files during runtime:
+- `food_data.txt` - Stores food donation records and their current status.
+- `volunteer_data.txt` - Stores registered volunteer profiles and locations.
+- `distribution_log.txt` - Maintains the historical log of completed distributions.
 
-## How to Run
+## Getting Started
 
-1. Download or clone this repository.
-2. Open the project folder in VS Code.
-3. Open the terminal in that folder.
-4. Run:
+### Prerequisites
+- Make sure you have **Python 3.x** installed on your system. No external libraries or dependencies are required as the project uses Python's built-in standard libraries (e.g., `os`).
 
+### Running the Application
+
+1. Clone or download this repository to your local machine.
+2. Open your terminal or command prompt inside the project directory.
+3. Run the application using the following command:
    ```bash
    python main.py
-   ```
-
-   On some Windows computers, use:
-
-   ```bash
-   py main.py
-   ```
-
-## Project Files
-
-- `main.py` — main program
-- `food_data.txt` — saved food donation records
-- `volunteer_data.txt` — saved volunteer records
-- `distribution_log.txt` — distribution records
-
-The text files are initially empty. The program adds data as you use it.
-
-## Important Limitations
-
-This is an educational beginner project. Matching is based on exact area-name matching, not GPS or actual distance. The program stores the expiry duration entered by the donor but does not automatically check whether food has expired. Food safety must be checked by responsible people before real-world distribution.
-
-## Built With
-
-- Python
-- Lists and strings
-- Functions and loops
-- Conditional statements
-- Basic file handling
